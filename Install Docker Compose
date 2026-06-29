@@ -1,3 +1,7 @@
+## Docker installation
+yum install docker -y
+systemctl start docker
+
 ## Install Docker compose commands
 
 sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
