@@ -1,7 +1,13 @@
 ## Install Docker compose commands
 
 sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-
 sudo chmod +x /usr/local/bin/docker-compose
-
 docker-compose version
+
+## Jenkins installation
+
+wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
+yum install jenkins -y
+systemctl start jenkins 
